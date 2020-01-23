@@ -1,0 +1,44 @@
+.stocks {
+  &__header {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+}
+
+.slider {
+  &__block {
+    display: flex;
+    justify-content: center;
+    > img {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+  li {
+    margin: 0 0.25rem;
+  }
+
+  button {
+    display: block;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background: none;
+border: 1px solid #786158;
+    text-indent: -9999px;
+  }
+
+  li.slick-active button {
+    background: #786158;
+border: 1px solid #786158;
+  }
+}

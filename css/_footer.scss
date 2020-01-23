@@ -1,0 +1,254 @@
+.footer {
+  background: #f3efe3;
+  &__inner {
+    display: flex;
+    padding: 120px 0;
+    @include max-tablet {
+      flex-direction: column;
+    }
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include max-tablet {
+      display: none;
+    }
+  }
+  &__logo-img {
+    > img {
+      max-width: 100%;
+    }
+    max-width: 80%;
+    @include max-tablet-l {
+      max-width: 70%;
+    }
+  }
+  &__copy {
+    font-size: 15px;
+    color: #909090;
+    @include max-pc {
+      font-size: 12px;
+    }
+  }
+  &__menu {
+    display: flex;
+    flex-grow: 2;
+    justify-content: space-evenly;
+    @include max-tablet {
+      justify-content: space-between;
+      padding-bottom: 60px;
+    }
+  }
+  &__nav-item {
+    padding-bottom: 15px;
+    @include max-tablet-l {
+      padding-bottom: 10px;
+    }
+    @include max-tablet {
+      padding-bottom: 15px;
+    }
+  }
+  &__nav-item:last-child {
+    padding-bottom: unset;
+  }
+  &__nav-link {
+    text-decoration: none;
+    font-size: 15px;
+    color: #3f3f3f;
+    @include max-pc {
+      font-size: 12px;
+    }
+    @include max-tablet-l {
+      font-size: 10px;
+    }
+    @include max-tablet {
+      font-size: 15px;
+    }
+    @include max-phone-l {
+      font-size: 10px;
+    }
+  }
+  &__cont {
+    flex-grow: 0.5;
+    display: flex;
+    flex-direction: column;
+  }
+  &__cont-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+    @include max-pc {
+      padding-bottom: 25px;
+    }
+    @include max-tablet {
+      padding-bottom: 40px;
+    }
+  }
+  &__cont-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo-mini {
+    display: none;
+    > img {
+      max-width: 90%;
+    }
+
+    @include max-tablet {
+      display: block;
+    }
+  }
+  &__copy-mini {
+    font-size: 15px;
+    @include max-phone-l {
+      font-size: 10px;
+    }
+  }
+  &__phone {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include max-tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  &__phone-num {
+    font-weight: bold;
+    font-size: 22px;
+    color: #3f3f3f;
+    padding-bottom: 10px;
+    @include max-pc {
+      font-size: 18px;
+    }
+    @include max-tablet-l {
+      font-size: 14px;
+    }
+    @include max-tablet {
+      font-size: 22px;
+    }
+    @include max-phone-l {
+      font-size: 14px;
+    }
+    @include max-galaxy {
+      font-size: 10px;
+    }
+  }
+  &__phone-text {
+    > a {
+      text-decoration: none;
+      color: #786158;
+    }
+    width: fit-content;
+    font-size: 15px;
+    text-align: left;
+    border-bottom: 1px dashed #786158;
+    @include max-tablet-l {
+      font-size: 13px;
+    }
+    @include max-tablet {
+      font-size: 14px;
+      border-bottom: unset;
+    }
+    @include max-phone-l {
+      font-size: 11px;
+    }
+    @include max-galaxy {
+      font-size: 10px;
+    }
+  }
+  &__mail {
+    font-size: 14px;
+    @include max-tablet-l {
+      font-size: 12px;
+    }
+    @include max-tablet {
+      font-size: 14px;
+    }
+    @include max-phone-l {
+      font-size: 10px;
+    }
+  }
+  &__push {
+    @include max-tablet {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  &__push-title {
+    font-weight: bold;
+    font-size: 16px;
+    color: #2d2d2d;
+    padding-bottom: 15px;
+    @include max-pc {
+      font-size: 13px;
+    }
+    @include max-tablet-l {
+      font-size: 12px;
+    }
+    @include max-tablet {
+      font-size: 16px;
+    }
+    @include max-phone-l {
+      font-size: 10px;
+    }
+  }
+  &__push-form {
+    display: flex;
+    @include max-tablet {
+      flex-grow: 1;
+    }
+  }
+  &__push-input {
+    font-size: 15px;
+    background: #ffffff;
+    border: 1px solid #eaeaea;
+    width: 100%;
+    padding: 0 19px;
+  }
+  &__push-button {
+    background: #786158;
+    padding: 19px;
+    border: 1px solid #786158;
+    @include max-phone-l {
+      padding: 10px;
+    }
+  }
+  &__social-title,
+  &__pay-title {
+    font-size: 15px;
+    color: #909090;
+    padding-bottom: 10px;
+    @include max-tablet-l {
+      font-size: 12px;
+    }
+    @include max-tablet {
+      font-size: 15px;
+    }
+    @include max-phone-l {
+      font-size: 10px;
+    }
+  }
+  &__pay-title {
+    text-align: right;
+  }
+  &__social-icon:first-child {
+    padding-right: 15px;
+  }
+  &__social-icon {
+    > img {
+      max-width: 30%;
+    }
+  }
+  &__pay-icons {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__pay-icon:first-child {
+    margin-right: 15px;
+  }
+  &__pay-icon {
+    max-width: 30%;
+  }
+}

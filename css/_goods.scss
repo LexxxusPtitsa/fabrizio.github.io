@@ -1,0 +1,237 @@
+.goods {
+  padding-bottom: 60px;
+  &__inner {
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 24px;
+  }
+  &__redirect {
+    font-size: 16px;
+    line-height: 19px;
+    color: #786158;
+    @include max-tablet {
+        display: none;
+      }
+  }
+  &__catalog {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-column-gap: 110px;
+    @include max-tablet{
+        grid-column-gap: unset;
+        grid-template-columns: 1fr;
+    }
+  }
+  &__items {
+    flex-grow: 1;
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+    grid-column-gap: 36px;
+    @include max-tablet {
+        grid-column-gap: 10px;
+      }
+  }
+  &__card {
+    text-decoration: none;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0);
+    padding: 20px 0px;
+    &:hover {
+        .goods__props {
+            display: flex;
+        }
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        margin-top: -80px;
+        margin-bottom: -50px;
+        background: #fff;
+        height: 120%;
+        background: #ffffff;
+        border: 1px solid #e4e4e4;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.095505);
+      }
+    }
+    &--big{
+        height: 100%;
+        justify-content: center;
+        &:hover {
+          &::before {
+            margin-top: unset;
+            height: 100%;
+          }
+        }
+    }
+    @include max-tablet {
+        padding: 20px 0px;
+      }
+  }
+  &__big {
+    @include max-tablet{
+        display: none;
+    }
+    background: #ecf3fd;
+    display: grid;
+    align-items: center;
+    >a{
+        height: 100%;
+    }
+  }
+  &__img {
+    width: 100%;
+    position: relative;
+    padding-bottom: 20px;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 100%;
+    }
+  }
+  &__imag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+  }
+  &__name {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 50px;
+    color: #737373;
+    z-index: 2;
+    &--big {
+      padding-bottom: 17px;
+    }
+    @include max-pc {
+        font-size: 12px;
+      }
+      @include max-phone-l {
+        padding-bottom: 20px;
+        font-size: 10px;
+        line-height: 15px;
+      }
+  }
+  &__button {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #786158;
+    opacity: 0.5;
+    border: 1px solid #786158;
+    padding: 16px 60px;
+    &--big {
+      border: none;
+      background-color: #fff;
+      color: #2d2d2d;
+    }
+    @include max-pc{
+        font-size: 12px;
+        padding: 12px 30px;
+    }
+    @include max-tablet{
+        font-size: 12px;
+        padding: 12px 25px;
+    }
+    @include max-phone-l {
+        font-size: 10px;
+        padding: 12px 15px;
+      }
+  }
+  &__props {
+      display: none;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    padding: 20px 22px;
+    z-index: 2;
+    margin-top: -80px;
+    &--big{
+        top: 0;  
+        margin-top: unset;
+    }
+    @include max-tablet {
+        padding: 10px 10px;
+      }
+      @include max-phone-l {
+        padding: 10px 3px;
+      }
+  }
+  &__material {
+    padding-left: 30px;
+    background: url(../img/main_block/icon.png) no-repeat;
+    background-position: top left;
+    font-size: 14px;
+    line-height: 18px;
+    color: #816157;
+    @include max-tablet {
+        font-size: 12px;
+      }
+    @include max-phone-l {
+        padding-left: unset;
+        padding-top: 30px;
+        font-size: 10px;
+      }
+  }
+  &__color {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    &--red {
+      background: #8b4041;
+    }
+    &--blue {
+      background: #8c91ae;
+    }
+    &--gray {
+      background: #a89489;
+    }
+    &--black {
+      background: #3f3d42;
+    }
+    &--plus {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        top: 7px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: #000;
+        left: 7px;
+      }
+    }
+    @include max-tablet {
+        margin-bottom: 7px;
+      }
+    @include max-phone-l {
+        margin-bottom: 5px;
+      }
+  }
+}

@@ -1,0 +1,141 @@
+.slider-top {
+  width: 100%;
+  padding-bottom: 30px;
+  position: relative;
+  &__slide {
+    width: 100%;
+    background: #f3efe3;
+    position: relative;
+  }
+  &__img {
+    max-width: 50%;
+    margin: 0 auto;
+    @include max-pc {
+      margin-right: 10%;
+    }
+    @include max-tablet {
+      margin-right: 0;
+    }
+  }
+  &__text {
+    position: absolute;
+    font-size: 62px;
+    line-height: 68px;
+    left: 5%;
+    width: 30%;
+    z-index: 800;
+    bottom: 35%;
+    @include max-pc {
+      font-size: 55px;
+      line-height: 60px;
+      width: 35%;
+      bottom: 45%;
+    }
+    @include max-tablet-l {
+      font-size: 40px;
+      line-height: 48px;
+      width: 40%;
+      bottom: 45%;
+    }
+    @include max-tablet {
+      font-size: 35px;
+      line-height: 38px;
+      width: 50%;
+      bottom: 45%;
+    }
+    @include max-phone-l {
+      font-size: 25px;
+      line-height: 28px;
+      width: 50%;
+      bottom: 45%;
+    }
+  }
+  &__link {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 58px;
+    padding-left: 74px;
+    background: url(../img/slider-top-arrow.png) no-repeat;
+    background-position: left;
+    left: 5%;
+    bottom: 25%;
+    background-size: contain;
+    text-decoration: none;
+    color: #230715;
+    font-size: 16px;
+    @include max-tablet {
+      height: 40px;
+      padding-left: 50px;
+    }
+    @include max-phone-l {
+      height: 20px;
+      padding-left: 30px;
+      font-size: 12px;
+    }
+  }
+  &__button {
+    cursor: pointer;
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    top: 30%;
+    @include max-tablet {
+      top: unset;
+      bottom: 30px;
+      background: #fff;
+      width: 22px;
+      height: 22px;
+    }
+    &::before {
+      transition: 0.5s;
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #786158;
+      transform: rotate(45deg);
+      margin-top: 0;
+      margin-right: -6px;
+      @include max-tablet {
+        width: 10px;
+        height: 1px;
+        margin-right: -3px;
+      }
+    }
+    &::after {
+      transition: 0.5s;
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #786158;
+      transform: rotate(-45deg);
+      margin-top: 0;
+      @include max-tablet {
+        width: 10px;
+        height: 1px;
+      }
+    }
+  }
+
+  &__prev {
+    left: 5%;
+    transform: rotate(90deg);
+    @include max-tablet {
+      left: 5%;
+    }
+  }
+  &__next {
+    right: 5%;
+    transform: rotate(-90deg);
+    @include max-tablet {
+      left: 5%;
+      margin-left: 22px;
+    }
+  }
+}
